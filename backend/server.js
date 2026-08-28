@@ -7,7 +7,7 @@ const path = require('path');
 const { exec } = require('child_process');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // ========== BROKEN AUTHENTICATION ==========
 const JWT_SECRET = 'secret';
@@ -17,7 +17,11 @@ const USERS_FILE = path.join(__dirname, 'users.json');
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend')));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 // Helper functions
 function readUsers() {
   try {
@@ -175,6 +179,6 @@ app.get('/api/profile', authenticateToken, (req, res) => {
   res.json({ user: req.user });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
 });

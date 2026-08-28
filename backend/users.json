@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1787854270288",
+    "username": "habtamu",
+    "password": "$2a$10$sXI4huazQvd6ACIqfHCkt.C3tDwRZ1Gb8sGjAYWXzh1YoacrRmqO2",
+    "role": "admin"
+  },
+  {
+    "id": "1787854372765",
+    "username": "nathan",
+    "password": "$2a$10$TG7uqhSaNAH3waRvRml4deUB40gT6ixNlAy4vOZh8ApsXEusKeoPK",
+    "role": "customer"
+  }
+]

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management-Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== Navigation Bar  ========== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Employee Management</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Container -->
+  <div class="container">
+    <h2 id="formTitle">Login</h2>
+    
+    <div id="message" class="error"></div>
+    
+    <!-- LOGIN FORM -->
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" id="loginUsername" required placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required placeholder="Enter password">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="registerForm" style="display: none;">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" id="regUsername" required placeholder="Choose username">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="regPassword" required placeholder="Choose password">
+      </div>
+      <div class="form-group">
+        <label>Role</label>
+        <select id="regRole" required>
+          <option value="">Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="customer">Customer</option>
+          <option value="accountant">Accountant</option>
+        </select>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="toggle">
+      <span id="toggleText">Don't have an account?</span>
+      <a id="toggleLink">Register</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
